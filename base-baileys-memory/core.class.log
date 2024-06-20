@@ -1,0 +1,96 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214493498470@s.whatsapp.net',
+    fromMe: false,
+    id: '0E35A14B9A10C0AA9B668A2487E9D09F',
+    participant: undefined
+  },
+  messageTimestamp: 1718781378,
+  pushName: '.',
+  broadcast: false,
+  message: Message {
+    conversation: 'Lo',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Lo',
+  from: '5214493498470'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_86e9ff93-e269-4b32-942d-c27cd7b0452e',
+  keyword: 'key_02ecb2e2-31a2-4505-81d0-49173a3fc9c6',
+  answer: '🙌 Hola, bienvenido al chat automatizado de la UTMA',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '5d5d13e5f6b11038fda15ec8dad62b0b'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4417d4ca-8193-4de6-a17b-1db4fabc6231',
+  keyword: 'ans_86e9ff93-e269-4b32-942d-c27cd7b0452e',
+  answer: '¿Eres usuario *interno* o *externo*?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'd1958d32c4b3ca92285f33cf3a0d7727'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214493498470@s.whatsapp.net',
+    fromMe: false,
+    id: '076F8B67ED59491AE9E68B2F87594DFC',
+    participant: undefined
+  },
+  messageTimestamp: 1718781381,
+  pushName: '.',
+  broadcast: false,
+  message: Message {
+    conversation: 'Interno',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Interno',
+  from: '5214493498470'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5214493498470@s.whatsapp.net',
+    fromMe: false,
+    id: '4A6DBEEF7977197401BEA408EC8A179A',
+    participant: undefined
+  },
+  messageTimestamp: 1718781384,
+  pushName: '.',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '5214493498470'
+}
