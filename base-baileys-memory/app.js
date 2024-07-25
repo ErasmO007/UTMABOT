@@ -72,7 +72,7 @@ const flowPrincipal = addKeyword([EVENTS.WELCOME])
         //console.log('i18next', i18next.t('test'));
         const flow = handleFlow(FLOW_PRINCIPAL_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2');
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*');
     });
 
 
@@ -98,7 +98,7 @@ const flowInterno = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_INTERNO_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 10 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *10* o *0* para volver al menú anterior.');
         
         return flow
     });
@@ -123,13 +123,13 @@ const flowExterno = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_EXTERNO_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 7 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *7* o *0* para volver al menú anterior.');
 
         return flow;
     });
 
 const flowDespedida = addKeyword([EVENTS.ACTION])
-.addAnswer('¡Gracias por contactarnos! Si tienes alguna otra pregunta en el futuro, no dudes en ponerte en contacto con nosotros. ¡Que tengas un excelente día!')
+.addAnswer('¡Gracias por contactarnos! Si tienes alguna otra pregunta en el futuro, no dudes en ponerte en contacto con nosotros. ¡Que tengas un excelente día!', {capture:true});
     
     //https://ucarecdn.com/7fa95f00-825c-4430-b8d1-292156b08477/gif2video/-/preview/-/format/mp4/-/quality/normal/', capture: true});
 
@@ -154,7 +154,7 @@ const flowCajasInt = addKeyword([EVENTS.ACTION])
         };
         const flow = handleFlow(FLOW_CAJASINT_OPTIONS, input);
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 2 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *2* o *0* para volver al menú anterior.');
         
         return flow;
     })
@@ -169,7 +169,7 @@ const flowCajasInt = addKeyword([EVENTS.ACTION])
 
     const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-    if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+    if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
   
 });
 
@@ -211,7 +211,7 @@ const flowComunicacionInt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_COMUNICACIONINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 5 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *5* o *0* para volver al menú anterior.');
 
         return flow
     })
@@ -226,7 +226,7 @@ const flowComunicacionInt = addKeyword([EVENTS.ACTION])
 
     const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-    if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+    if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
 });
 
@@ -259,7 +259,7 @@ const flowServiciosEscolaresInt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_SERVICIOSESCOLARESINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 4 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *4* o *0* para volver al menú anterior.');
 
         return flow;
     })
@@ -274,7 +274,7 @@ const flowServiciosEscolaresInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -302,7 +302,7 @@ const flowIdiomasInt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_IDIOMASINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 3 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *3* o *0* para volver al menú anterior.');
     
         return flow;
     })
@@ -317,7 +317,7 @@ const flowIdiomasInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -335,7 +335,7 @@ const flowInternacionalizacionInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -353,7 +353,7 @@ const flowPsicologiaInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -371,7 +371,7 @@ const flowBibliotecaInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -416,7 +416,7 @@ const flowCarrerasInt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_CARRERASINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 6 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *6* o *0* para volver al menú anterior.');
     
         return flow;
     })
@@ -431,7 +431,7 @@ const flowCarrerasInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -457,7 +457,7 @@ const flowTutoriaInt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_TUTORIAINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 3 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *3* o *0* para volver al menú anterior.');
 
         return flow;
     })
@@ -471,7 +471,7 @@ const flowTutoriaInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -532,7 +532,7 @@ const flowReglamentoInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_REGLAMENTOINT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 9 o 0 para volver al menú anterior.')
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *9* o *0* para volver al menú anterior.')
 
             return flow;
 
@@ -547,7 +547,7 @@ const flowReglamentoInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -564,7 +564,7 @@ const flowEnfermeriaInt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -590,7 +590,7 @@ const flowCajasExt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_CAJASEXT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 2 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *2* o *0* para volver al menú anterior.');
 
         return flow;
     })
@@ -605,7 +605,7 @@ const flowCajasExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -647,7 +647,7 @@ const flowComunicacionExt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_COMUNICACIONEXT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 5 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *5* o *0* para volver al menú anterior.');
 
         return flow;
     })
@@ -662,7 +662,7 @@ const flowComunicacionExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -685,7 +685,7 @@ const flowServiciosEscolaresExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -706,7 +706,7 @@ const flowIdiomasExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -723,7 +723,7 @@ const flowInternacionalizacionExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -767,7 +767,7 @@ const flowCarrerasExt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_CARRERASEXT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 6 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *6* o *0* para volver al menú anterior.');
         
         return flow;
     })
@@ -781,7 +781,7 @@ const flowCarrerasExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -807,7 +807,7 @@ const flowTutoriaExt = addKeyword([EVENTS.ACTION])
         }
         const flow = handleFlow(FLOW_TUTORIAEXT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 3 o 0 para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *3* o *0* para volver al menú anterior.');
     
         return flow;
     })
@@ -823,7 +823,7 @@ const flowTutoriaExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
@@ -884,7 +884,7 @@ const flowReglamentoExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_REGLAMENTOEXT_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del 1 al 9 o 0 para volver al menú anterior.')
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *9* o *0* para volver al menú anterior.')
 
             return flow;
     })
@@ -899,7 +899,7 @@ const flowReglamentoExt = addKeyword([EVENTS.ACTION])
 
         const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor responde 1 o 2')
+        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
 
