@@ -1065,7 +1065,7 @@ const flowEducacionContinuaExt = addKeyword([EVENTS.ACTION])
 
 });
 
-const flowOfertaCapacitacionExterno = addKeyword([EVENTS.ACTION])
+const flowOfertaCapacitacionExt = addKeyword([EVENTS.ACTION])
     .addAnswer('Te ofrecemos diversas oportunidades para mejorar tus habilidades y conocimientos a través de nuestros cursos y talleres.', {
         media: 'https://ucarecdn.com/b1f4843f-b213-4067-a08e-a6f47c2e3c0c/-/format/auto/-/quality/smart/',
     })
