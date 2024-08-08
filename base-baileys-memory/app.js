@@ -1305,7 +1305,7 @@ const main = async () => {
         flowCCapacitacionExt, 
         flowCIdiomasExt, 
         flowCEvaluacionExt,
-        flowOfertaCapacitacionExterno, 
+        flowOfertaCapacitacionExt, 
         flowReglamentoExt]);
     const adapterProvider = createProvider(BaileysProvider);
 
