@@ -79,30 +79,28 @@ const flowPrincipal = addKeyword([EVENTS.WELCOME])
 // Flujo para alumno interno
 const flowInterno = addKeyword([EVENTS.ACTION])
     .addAnswer('¿Sobre qué te gustaría preguntar?')
-    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Becas\n*2*. Biblioteca\n*3*. Cajas\n*4*. Carreras\n*5*. Comunicación\n*6*. Cultura y Deportes\n*7*. Educación Continua\n*8*. Enfermería\n*9*. Estadías\n*10*. Idiomas\n*11*. Internacionalización\n*12*. Psicología\n*13*. Servicios Escolares\n*14*. Tutoria\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
+    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Becas\n*2*. Cajas\n*3*. Carreras\n*4*. Comunicación\n*5*. Cultura y Deportes\n*6*. Educación Continua\n*7*. Enfermería\n*8*. Estadías\n*9*. Idiomas\n*10*. Psicología\n*11*. Servicios Escolares\n*12*. Tutoria\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
         const input = parseInt(ctx.body);
 
         const FLOW_INTERNO_OPTIONS = {
             0: () => { return gotoFlow(flowPrincipal) },
             1: () => { return gotoFlow(flowBecasInt) },
-            2: () => { return gotoFlow(flowBibliotecaInt) },
-            3: () => { return gotoFlow(flowCajasInt) },
-            4: () => { return gotoFlow(flowCarrerasInt) },
-            5: () => { return gotoFlow(flowComunicacionInt) },
-            6: () => { return gotoFlow(flowCulturaDeportesInt) },
-            7: () => { return gotoFlow(flowEducacionContinuaInt) },
-            8: () => { return gotoFlow(flowEnfermeriaInt) },
-            9: () => { return gotoFlow(flowEstadiasInt) },
-            10: () => { return gotoFlow(flowIdiomasInt) },
-            11: () => { return gotoFlow(flowInternacionalizacionInt) },
-            12: () => { return gotoFlow(flowPsicologiaInt) },
-            13: () => { return gotoFlow(flowServiciosEscolaresInt) },
-            14: () => { return gotoFlow(flowTutoriaInt) },
+            2: () => { return gotoFlow(flowCajasInt) },
+            3: () => { return gotoFlow(flowCarrerasInt) },
+            4: () => { return gotoFlow(flowComunicacionInt) },
+            5: () => { return gotoFlow(flowCulturaDeportesInt) },
+            6: () => { return gotoFlow(flowEducacionContinuaInt) },
+            7: () => { return gotoFlow(flowEnfermeriaInt) },
+            8: () => { return gotoFlow(flowEstadiasInt) },
+            9: () => { return gotoFlow(flowIdiomasInt) },
+            10: () => { return gotoFlow(flowPsicologiaInt) },
+            11: () => { return gotoFlow(flowServiciosEscolaresInt) },
+            12: () => { return gotoFlow(flowTutoriaInt) },
         }
 
         const flow = handleFlow(FLOW_INTERNO_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *14* o *0* para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *12* o *0* para volver al menú anterior.');
         
         return flow
     });
@@ -111,7 +109,7 @@ const flowInterno = addKeyword([EVENTS.ACTION])
 // Flujo para alumno externo
 const flowExterno = addKeyword([EVENTS.ACTION])
     .addAnswer('¿Sobre qué te gustaría preguntar?')
-    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Becas\n*2*. Cajas\n*3*. Carreras\n*4*. Comunicación\n*5*. Educación Continua\n*6*. Idiomas\n*7*. Internacionalización\n*8*. Servicios Escolares\n*9*. Tutoria\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
+    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Becas\n*2*. Cajas\n*3*. Carreras\n*4*. Comunicación\n*5*. Educación Continua\n*6*. Idiomas\n*7*. Servicios Escolares\n*8*. Tutoria\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
         const input = parseInt(ctx.body);
 
         const FLOW_EXTERNO_OPTIONS = {
@@ -122,14 +120,13 @@ const flowExterno = addKeyword([EVENTS.ACTION])
             4: () => { return gotoFlow(flowComunicacionExt) },
             5: () => { return gotoFlow(flowEducacionContinuaExt) },
             6: () => { return gotoFlow(flowIdiomasExt) },
-            7: () => { return gotoFlow(flowInternacionalizacionExt) },
-            8: () => { return gotoFlow(flowServiciosEscolaresExt) },
-            9: () => { return gotoFlow(flowTutoriaExt) },
+            7: () => { return gotoFlow(flowServiciosEscolaresExt) },
+            8: () => { return gotoFlow(flowTutoriaExt) },
         }
 
         const flow = handleFlow(FLOW_EXTERNO_OPTIONS, input)
 
-        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *9* o *0* para volver al menú anterior.');
+        if (!flow) return fallBack('Opción no válida, por favor elige una opción del *1* al *8* o *0* para volver al menú anterior.');
 
         return flow;
     });
@@ -142,7 +139,7 @@ const flowDespedida = addKeyword([EVENTS.ACTION])
 
 // Flujos de respuestas internas específicas
 const flowCajasInt = addKeyword([EVENTS.ACTION])
-    .addAnswer('El área de Cajas de la UTMA está a tu disposición para atender todos los trámites relacionados con pagos y asuntos financieros. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 108 en un horario de 8 a.m. a 4 p.m. o de 12 p.m a 7 p.m.')
+    .addAnswer('El área de Cajas de la UTMA está a tu disposición para atender todos los trámites relacionados con pagos y asuntos financieros. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 108 en un horario de 8 a.m. a 7 p.m.')
     .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Costos\n*2*. Métodos de pago\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { fallBack, flowDynamic, gotoFlow }) => {
         const input = parseInt(ctx.body);
 
@@ -333,25 +330,6 @@ const flowIdiomasInt = addKeyword([EVENTS.ACTION])
 
     });
 
-
-const flowInternacionalizacionInt = addKeyword([EVENTS.ACTION])
-    .addAnswer('El área de Internacionalización de la UTMA te ofrece oportunidades para participar en programas de intercambio, colaboraciones internacionales y más. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 112.')
-
-    .addAnswer('¿Hay algo más en lo que te podamos ayudar?')
-    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Si\n*2*. No', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
-        const input = parseInt(ctx.body);
-        const FLOW_PREGUNTA_OPTIONS = {
-            1: () => { return gotoFlow(flowInterno) },
-            2: () => { return gotoFlow(flowDespedida) },
-        }
-
-        const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
-
-        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
-
-    });
-
-
 const flowPsicologiaInt = addKeyword([EVENTS.ACTION])
     .addAnswer('El área de Psicología de la UTMA está disponible para apoyarte con tus necesidades de bienestar emocional y mental. Para más información te invitamos a comunicarte con nosotros.', {
         media: 'https://ucarecdn.com/dfc6ffaf-499f-4301-8ed9-dd394b2d7c67/-/format/auto/-/quality/smart/', 
@@ -370,25 +348,6 @@ const flowPsicologiaInt = addKeyword([EVENTS.ACTION])
         if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
 
     });
-
-
-const flowBibliotecaInt = addKeyword([EVENTS.ACTION])
-    .addAnswer('La biblioteca de la UTMA ofrece una amplia variedad de recursos y servicios para apoyar tus estudios e investigaciones. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 114.')
-
-    .addAnswer('¿Hay algo más en lo que te podamos ayudar?')
-    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Si\n*2*. No', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
-        const input = parseInt(ctx.body);
-        const FLOW_PREGUNTA_OPTIONS = {
-            1: () => { return gotoFlow(flowInterno) },
-            2: () => { return gotoFlow(flowDespedida) },
-        }
-
-        const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
-
-        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
-
-    });
-
 
 const flowCarrerasInt = addKeyword([EVENTS.ACTION])
     .addAnswer('Las carreras que ofrece la UTMA están diseñadas para brindarte una formación integral y de calidad. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 115.')
@@ -918,23 +877,6 @@ const flowIdiomasExt = addKeyword([EVENTS.ACTION])
 
     });
 
-const flowInternacionalizacionExt = addKeyword([EVENTS.ACTION])
-    .addAnswer('El área de Internacionalización de la UTMA te ofrece oportunidades para participar en programas de intercambio, colaboraciones internacionales y más. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 112.')
-
-    .addAnswer('¿Hay algo más en lo que te podamos ayudar?')
-    .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Si\n*2*. No', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
-        const input = parseInt(ctx.body);
-        const FLOW_PREGUNTA_OPTIONS = {
-            1: () => { return gotoFlow(flowExterno) },
-            2: () => { return gotoFlow(flowDespedida) },
-        }
-
-        const flow = handleFlow(FLOW_PREGUNTA_OPTIONS, input)
-
-        if (!flow) return fallBack('Opción no válida, por favor responde *1* o *2*')
-
-    });
-
 const flowCarrerasExt = addKeyword([EVENTS.ACTION])
     .addAnswer('Las carreras que ofrece la UTMA están diseñadas para brindarte una formación integral y de calidad. Para más información te invitamos a comunicarte al teléfono 449 925 3920 ext. 115.')
     .addAnswer('Si quieres conocer tu Plan de Estudios selecciona el *número* que corresponda a la opción que deseas:\n*1*. Desarrollo de Software \n*2*. Inteligencia Artificial \n*3*. Negocios Internacionales\n*4*. Sistemas de Gestión de Calidad\n*5*. Materiales\n*6*. Robótica\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { fallBack, flowDynamic, gotoFlow }) => {
@@ -1030,7 +972,7 @@ const flowEducacionContinuaExt = addKeyword([EVENTS.ACTION])
     
     });
     
-    const flowCCapacitacionExt= addKeyword([EVENTS.ACTION])
+const flowCCapacitacionExt= addKeyword([EVENTS.ACTION])
 .addAnswer('El Centro de Capacitación de la UTMA te ofrece diversas oportunidades para mejorar tus habilidades y conocimientos a través de nuestros cursos y talleres.')
 .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Oferta\n*2*. Proceso de Inscripción\n*0*. Volver al menú anterior', { capture: true }, async (ctx, { fallBack, flowDynamic, gotoFlow }) => {
     const input = parseInt(ctx.body);
@@ -1133,7 +1075,7 @@ const flowCIdiomasExt= addKeyword([EVENTS.ACTION])
 
 });
     
-    const flowCEvaluacionExt= addKeyword([EVENTS.ACTION])
+const flowCEvaluacionExt= addKeyword([EVENTS.ACTION])
     .addAnswer('Te ofrecemos diversas oportunidades para mejorar tus habilidades a través de nuestras evaluaciones y certificaciones. Para conocer nuestra oferta de cursos te invitamos a ponerte en contacto al numero 449 925 3920 ext. 301 o al correo educacioncontinua@utma.edu.mx')
     .addAnswer('¿Hay algo más en lo que te podamos ayudar?')
     .addAnswer('Selecciona el *número* que corresponda a la opción que deseas:\n*1*. Si\n*2*. No', { capture: true }, async (ctx, { gotoFlow, fallBack }) => {
@@ -1277,10 +1219,8 @@ const main = async () => {
         flowCajasInt, 
         flowComunicacionInt, 
         flowServiciosEscolaresInt, 
-        flowIdiomasInt, 
-        flowInternacionalizacionInt, 
+        flowIdiomasInt,  
         flowPsicologiaInt, 
-        flowBibliotecaInt, 
         flowCarrerasInt, 
         flowCulturaDeportesInt, 
         flowTutoriaInt, 
@@ -1297,7 +1237,6 @@ const main = async () => {
         flowComunicacionExt, 
         flowServiciosEscolaresExt, 
         flowIdiomasExt, 
-        flowInternacionalizacionExt, 
         flowCarrerasExt, 
         flowBecasExt, 
         flowTutoriaExt, 
